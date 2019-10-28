@@ -1,2 +1,2 @@
 # Alexa-SleepIQ
-Alexa integration with SleepIQ bed
+Alexa integration with the SleepIQ bed
