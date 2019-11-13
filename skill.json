@@ -1,0 +1,44 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Sleep IQ smart bed Alexa skill",
+          "examplePhrases": [
+            "Alexa, ask my bed to move my head up"
+          ],
+          "name": "SleepIQ smart bed",
+          "description": "TODO: skill description"
+        }
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "TODO: Sample Testing Instructions.",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "permissions": [
+      {
+        "name": "alexa::person_id:read"
+      }
+    ],
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "en-US": {
+          "privacyPolicyUrl": "http://developer.amazon.com/sampleTestingUrl"
+        }
+      },
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

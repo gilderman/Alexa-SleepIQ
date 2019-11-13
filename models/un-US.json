@@ -1,0 +1,715 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my bed",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "BedMovementIntent",
+                    "slots": [
+                        {
+                            "name": "BedOperations",
+                            "type": "BedOperations",
+                            "samples": [
+                                "adjust",
+                                "put",
+                                "move",
+                                "set"
+                            ]
+                        },
+                        {
+                            "name": "BedParts",
+                            "type": "BedParts",
+                            "samples": [
+                                "my legs",
+                                "legs",
+                                "feet",
+                                "my head",
+                                "head"
+                            ]
+                        },
+                        {
+                            "name": "BedDirections",
+                            "type": "BedDirections",
+                            "samples": [
+                                "down",
+                                "up"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{BedOperations} {BedParts} {BedDirections}"
+                    ]
+                },
+                {
+                    "name": "PresetIntent",
+                    "slots": [
+                        {
+                            "name": "BedOperations",
+                            "type": "BedOperations",
+                            "samples": [
+                                "put",
+                                "adjust",
+                                "set",
+                                "move"
+                            ]
+                        },
+                        {
+                            "name": "Preset",
+                            "type": "Preset",
+                            "samples": [
+                                "favorite",
+                                "watch tv",
+                                "snore",
+                                "read",
+                                "zero gravity",
+                                "flat"
+                            ]
+                        },
+                        {
+                            "name": "BedSide",
+                            "type": "BedSide"
+                        }
+                    ],
+                    "samples": [
+                        "{BedOperations} it to {Preset} {BedSide}",
+                        "{BedOperations} it {Preset} {BedSide}",
+                        "{BedOperations} {Preset} {BedSide}"
+                    ]
+                },
+                {
+                    "name": "WarmerIntent",
+                    "slots": [
+                        {
+                            "name": "BedOperations",
+                            "type": "BedOperations",
+                            "samples": [
+                                "set",
+                                "adjust",
+                                "switch",
+                                "turn"
+                            ]
+                        },
+                        {
+                            "name": "Warmer",
+                            "type": "Warmer",
+                            "samples": [
+                                "You can say my warmer my foot warmer my leg warmer or leg warmer"
+                            ]
+                        },
+                        {
+                            "name": "TempOptions",
+                            "type": "TempOptions",
+                            "samples": [
+                                "Off",
+                                "Medium",
+                                "Low",
+                                "Very Hot",
+                                "Hot"
+                            ]
+                        },
+                        {
+                            "name": "BedSide",
+                            "type": "BedSide"
+                        }
+                    ],
+                    "samples": [
+                        "{BedOperations} {Warmer}  {TempOptions} {BedSide}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "BedDirections",
+                    "values": [
+                        {
+                            "id": "0",
+                            "name": {
+                                "value": "down"
+                            }
+                        },
+                        {
+                            "id": "50",
+                            "name": {
+                                "value": "up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BedParts",
+                    "values": [
+                        {
+                            "id": "F",
+                            "name": {
+                                "value": "feet",
+                                "synonyms": [
+                                    "my legs",
+                                    "my feet",
+                                    "legs"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "H",
+                            "name": {
+                                "value": "head",
+                                "synonyms": [
+                                    "my head"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Preset",
+                    "values": [
+                        {
+                            "id": "6",
+                            "name": {
+                                "value": "snore"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "name": {
+                                "value": "zero gravity"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "name": {
+                                "value": "favorite"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "name": {
+                                "value": "read"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "name": {
+                                "value": "watch tv"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "name": {
+                                "value": "flat"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BedOperations",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "adjust",
+                                "synonyms": [
+                                    "to adjust"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "put",
+                                "synonyms": [
+                                    "to put"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "set",
+                                "synonyms": [
+                                    "to set"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "move",
+                                "synonyms": [
+                                    "to move"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "TempOptions",
+                    "values": [
+                        {
+                            "id": "99",
+                            "name": {
+                                "value": "Very Hot",
+                                "synonyms": [
+                                    "on very hot",
+                                    "to Burn",
+                                    "Burn",
+                                    "to Very Hot"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "0",
+                            "name": {
+                                "value": "Off",
+                                "synonyms": [
+                                    "on off",
+                                    "to Off"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "57",
+                            "name": {
+                                "value": "Medium",
+                                "synonyms": [
+                                    "on medium",
+                                    "to Medium"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "72",
+                            "name": {
+                                "value": "High",
+                                "synonyms": [
+                                    "on high",
+                                    "to High"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "31",
+                            "name": {
+                                "value": "Low",
+                                "synonyms": [
+                                    "on low",
+                                    "to Low"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "BedSide",
+                    "values": [
+                        {
+                            "id": "R",
+                            "name": {
+                                "value": "Right",
+                                "synonyms": [
+                                    "for Ilia",
+                                    "On the right"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "L",
+                            "name": {
+                                "value": "Left",
+                                "synonyms": [
+                                    "for lena",
+                                    "On the left"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Warmer",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "The foot warmer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "The warmer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Foot warmer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "My foot warmer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "my leg wormer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "My warmer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Warmer",
+                                "synonyms": [
+                                    "my leg wormer"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "BedMovementIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "BedOperations",
+                            "type": "BedOperations",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.717177123536.763653668299"
+                            }
+                        },
+                        {
+                            "name": "BedParts",
+                            "type": "BedParts",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1287713783209.1037185237548"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1236238206540.904599739020.1051905679532"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "BedDirections",
+                            "type": "BedDirections",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1310094372991.1086671785387"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1236238206540.713022615381.654538317256"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "PresetIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "BedOperations",
+                            "type": "BedOperations",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.968902894366.1363463372565"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1314861125089.1116628921643.695244890859"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Preset",
+                            "type": "Preset",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1393167660604.925134889318"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1393167660604.925134889318.537818896365"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "BedSide",
+                            "type": "BedSide",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.847791894283.610734496196.1446597061509"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "WarmerIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "BedOperations",
+                            "type": "BedOperations",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.411631812202.519361319760"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.411631812202.519361319760.1148449100532"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Warmer",
+                            "type": "Warmer",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.11343532477.1208836833085"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.11343532477.1208836833085.177327360574"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "TempOptions",
+                            "type": "TempOptions",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.411631812202.25486844675"
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.411631812202.25486844675.1107436968228"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "BedSide",
+                            "type": "BedSide",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.11343532477.1180340762567.1056583046821"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1310094372991.1086671785387",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me up or down"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1287713783209.1037185237548",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "please tell me head or feet"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.561389792787.139588719845",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what type of preset configuration would you like to set"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1393167660604.925134889318",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which bed configuration would you like to set"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1393167660604.925134889318.537818896365",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can select one of the following presets - snore, flat, zero gravity, watch tv, readf or favorite"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1236238206540.713022615381.654538317256",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can say Up or Down"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1236238206540.904599739020.1051905679532",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can say head, legs or feet"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.968902894366.1363463372565",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What do you want to do you can move, set, put, adjust "
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.717177123536.763653668299",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What do you want to do, you can say set, move, put, adjust"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.411631812202.519361319760",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What do you want to do"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1314861125089.1116628921643.695244890859",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can say something like, move my head up, or adjust my feet down"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.411631812202.519361319760.1148449100532",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can say something like, move my head up, or adjust my feet down, or turn my warmer off "
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.411631812202.25486844675.1107436968228",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can ask to set the warmer temperature to hot, low, medium, off or very hot"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.411631812202.25486844675",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "How hot do you want the warmer to be?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.847791894283.610734496196.1446597061509",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which side of the bad you want me to change?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.11343532477.1208836833085",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you asking about the warmer?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.11343532477.1208836833085.177327360574",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you talking about the warmer?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.11343532477.1180340762567.1056583046821",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you asking about the warmer?"
+                    }
+                ]
+            }
+        ]
+    }
+}
