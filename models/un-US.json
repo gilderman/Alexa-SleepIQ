@@ -50,10 +50,14 @@
                                 "down",
                                 "up"
                             ]
+                        },
+                        {
+                            "name": "BedSide",
+                            "type": "BedSide"
                         }
                     ],
                     "samples": [
-                        "{BedOperations} {BedParts} {BedDirections}"
+                        "{BedOperations} {BedParts} {BedDirections} {BedSide}"
                     ]
                 },
                 {
@@ -222,6 +226,14 @@
                     "values": [
                         {
                             "name": {
+                                "value": "turn",
+                                "synonyms": [
+                                    "to turn"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
                                 "value": "adjust",
                                 "synonyms": [
                                     "to adjust"
@@ -341,39 +353,23 @@
                     "values": [
                         {
                             "name": {
-                                "value": "The foot warmer"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "The warmer"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Foot warmer"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "My foot warmer"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "my leg wormer"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "My warmer"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "Warmer",
+                                "value": "heater",
                                 "synonyms": [
-                                    "my leg wormer"
+                                    "the leg heater",
+                                    "my leg heater",
+                                    "the heater",
+                                    "my heater"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "warmer",
+                                "synonyms": [
+                                    "my leg warmer",
+                                    "the leg warmer",
+                                    "the warmer",
+                                    "my warmer"
                                 ]
                             }
                         }
@@ -395,7 +391,13 @@
                             "elicitationRequired": true,
                             "prompts": {
                                 "elicitation": "Elicit.Slot.717177123536.763653668299"
-                            }
+                            },
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1298956437287.379229828541.730021698940"
+                                }
+                            ]
                         },
                         {
                             "name": "BedParts",
@@ -424,6 +426,19 @@
                                 {
                                     "type": "hasEntityResolutionMatch",
                                     "prompt": "Slot.Validation.1236238206540.713022615381.654538317256"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "BedSide",
+                            "type": "BedSide",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {},
+                            "validations": [
+                                {
+                                    "type": "hasEntityResolutionMatch",
+                                    "prompt": "Slot.Validation.1298956437287.1187238321634.956274816133"
                                 }
                             ]
                         }
@@ -679,7 +694,7 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Which side of the bad you want me to change?"
+                        "value": "Which side of the bed you want to change, left ot right?"
                     }
                 ]
             },
@@ -706,7 +721,25 @@
                 "variations": [
                     {
                         "type": "PlainText",
-                        "value": "Are you asking about the warmer?"
+                        "value": "Which side of the bed you want to change, left ot right?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1298956437287.1187238321634.956274816133",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which side of the bed you want to change, left ot right?"
+                    }
+                ]
+            },
+            {
+                "id": "Slot.Validation.1298956437287.379229828541.730021698940",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You can say something like, move my head up, or adjust my feet down"
                     }
                 ]
             }
