@@ -6,7 +6,7 @@ const messages = {
   OK:'Sure, my pleasure',
   ERROR: 'Uh Oh. Looks like something went wrong.',
   ERROR1: 'Sorry, I had trouble doing what you asked. Please try again.',
-  GOODBYE: 'Bye! Thanks for using skill personalization demo skill!',
+  GOODBYE: 'Bye! Thanks for using smart bed skill!',
   UNHANDLED: 'This skill doesn\'t support that. Please ask something else.',
   HELP: 'You can say move my head or legs up or down, you can also ask to set the bed in one of the presets such as: read, watch tv, zero gravity, snore, or favorite, finally you can add on the left or on the right',
 };
@@ -168,7 +168,6 @@ function getBedSide(slots) {
     
     if (slots.BedSide && 
         slots.BedSide.resolutions &&
-        slots.BedSide.resolutions.resolutions && 
         slots.BedSide.resolutions.resolutionsPerAuthority &&
         slots.BedSide.resolutions.resolutionsPerAuthority[0] &&
         slots.BedSide.resolutions.resolutionsPerAuthority[0].values[0]) {
